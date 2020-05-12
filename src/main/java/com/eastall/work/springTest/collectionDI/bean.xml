@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 
+	集合注入都是给<property>添加子标签
+	数组:<array>
+	List:list
+	Set:set
+	Properties:<props>
+	
+	
+	普通数据：<value>
+	引用数据：<ref>
+ -->
+
+	<bean id="collDataId"
+		class="com.eastall.work.springTest.collectionDI.CollData">
+		<property name="arrayData">
+			<array>
+				<value>小明</value>
+				<value>小红</value>
+				<value>小黄</value>
+			</array>
+		</property>
+		<property name="listData">
+			<list>
+				<value>小明</value>
+				<value>小红</value>
+				<value>小黄</value>
+			</list>
+		</property>
+		<property name="setData">
+			<set>
+				<value>小明</value>
+				<value>小红</value>
+				<value>小黄</value>
+			</set>
+		</property>
+		<property name="mapData">
+			<map>
+				<entry key="1001" value="小明"></entry>
+				<entry key="1002" value="小红"></entry>
+				<entry key="1003" value="小黄"></entry>
+			</map>
+		</property>
+		<property name="propData">
+			<props>
+				<prop key="1001">小明</prop>
+				<prop key="1002">小红</prop>
+				<prop key="1003">小黄</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
